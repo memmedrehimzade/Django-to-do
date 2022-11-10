@@ -21,4 +21,6 @@ urlpatterns = [
     path('clear/', views.clear, name='clear_username'),
     path('admin/', admin.site.urls),
     path('', include('tasks.urls')),
+    path('test/',views.test,name='test')
+    
 ]

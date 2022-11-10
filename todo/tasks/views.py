@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse, render_to_response
+from django.shortcuts import render, redirect, reverse
 from django.http import HttpResponseRedirect,HttpResponse
 from .models import TaskForm, Task, UsernameForm, Username
 from django.template import RequestContext
@@ -74,3 +74,10 @@ def clear(request):
     response = HttpResponseRedirect('/tasks/')
     response.delete_cookie('username')
     return response
+
+def test(request):
+    response=HttpResponse('<b>salam</b>')
+    return response
+
+def test1(request):
+    return render(request,'base.html')
